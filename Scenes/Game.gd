@@ -1,6 +1,5 @@
 extends Node2D
 
-
 onready var sentence_word = preload("res://SentenceWord.tscn")
 var mouse_inside = false
 var missing_words_len 
@@ -22,8 +21,6 @@ func set_box_color(subjekt, objekt, predikat, box, rijec):
 		box.texture = load("res://Assets/Blocks/DiffBlueButton.png")
 	elif rijec in predikat:
 		box.texture = load("res://Assets/Blocks/OrangeButton.png")
-	else:
-		pass
 
 func delete_children_nodes(parent_node):
 	for n in parent_node.get_children():
@@ -111,7 +108,6 @@ func setup_scene():
 			set_box_color(subjekt, objekt, predikat, sentence_container[i], sentence_array[i])
 	
 	#GENERATING SUGGESTIONS
-	#for i in range(Global.len_suggestions_words):
 	while true:
 		if len(suggestions) == Global.len_suggestions_words + 1:
 			break
@@ -123,7 +119,6 @@ func setup_scene():
 			continue
 		#AKO IMAMO PREDIKAT TRAZIMO SUBJEKTE I OBJEKTE
 		if 'p' in missing_word_type:
-		#if sentence[random_sentence].subjekt.to_upper() in sentence_array: # provjera ako predlozena rijec vec postoji u nasoj recenici koja je u zadatku
 			var tmp_array = sentences[random_sentence].subjekt + sentences[random_sentence].objekt
 			tmp_array.shuffle()
 			for suggested_subjekt in tmp_array:
@@ -146,7 +141,6 @@ func setup_scene():
 	suggestions.shuffle()
 	#DISPLAYING SUGGESTIONS
 	var suggestions_boxes = get_node("SuggestedAnswers/HBoxContainer").get_children()
-	#var suggestions_boxes_size = get_node("SuggestedAnswers/HBoxContainer").get_children().size()
 	for i in range(5):
 		if i < Global.len_suggestions_words + 1:
 			suggestions_boxes[i].get_children()[0].text = suggestions[i]
@@ -155,11 +149,7 @@ func setup_scene():
 			suggestions_boxes[i].hide()
 	
 func move_all():
-	#get_node("Start").move(Vector2(-1280, 0))
-	#get_node("Options").move(Vector2(0, 100))
 	get_node("UI").move(Vector2(0, -1280))
-	#get_node("Sentence/HBoxContainer/Button6").hide()
-	#get_node("Sentence/HBoxContainer/Button3").hide()
 	get_node("Sentence").move(Vector2(0, 190))
 	get_node("BackButton").move(Vector2(50, 50))
 	get_node("ResetButton").move(Vector2(50, 580))

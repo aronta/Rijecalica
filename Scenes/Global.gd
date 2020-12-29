@@ -8,11 +8,9 @@ var difficulty
 var used_sentence = []
 var global_sentence_container
 var curr_sentence_array
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
 
 var sentences : Dictionary
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -23,6 +21,7 @@ func load_json(path) -> Dictionary:
 	file.open(path, file.READ)
 	var sentences = parse_json(file.get_as_text())
 	return sentences
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
