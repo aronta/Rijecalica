@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://DraggableTextureRect.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Blocks/BlueButton.png" type="Texture" id=2]
+[ext_resource path="res://Fonts/VarelaRound-Regular.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 25
+font_data = ExtResource( 3 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 96, 56 )
+
+[node name="SuggestionBox" type="TextureRect"]
+margin_left = -79.0
+margin_top = -48.0
+margin_right = 88.0
+margin_bottom = 52.0
+texture = ExtResource( 2 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_right = 182.0
+margin_bottom = 100.0
+custom_fonts/font = SubResource( 1 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2( 88, 48 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 2 )
+[connection signal="gui_input" from="." to="." method="_on_TextureRect_gui_input"]

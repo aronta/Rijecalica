@@ -1,0 +1,37 @@
+{
+	"0": {
+		"recenica": "Ja sam covjek",
+		"predikat": ["sam"],
+		"subjekt": ["Ja"],
+		"objekt": ["covjek"],
+		"ostalo" : []
+	},
+	"1": {
+		"recenica": "Ti si pas",
+		"predikat": ["si"],
+		"subjekt": ["Ti"],
+		"objekt": ["pas"],
+		"ostalo" : []
+	},
+	"2": {
+		"recenica": "Pas pije vodu",
+		"predikat": ["pije"],
+		"subjekt": ["Pas"],
+		"objekt": ["vodu"],
+		"ostalo" : []
+	},
+	"3": {
+		"recenica": "Ivan uči povijest",
+		"predikat": ["uči"],
+		"subjekt": ["Ivan"],
+		"objekt": ["povijest"],
+		"ostalo" : []
+	},
+	"4": {
+		"recenica": "Anica vozi biciklu",
+		"predikat": ["vozi"],
+		"subjekt": ["Anica"],
+		"objekt": ["biciklu"],
+		"ostalo" : []
+	}
+}
