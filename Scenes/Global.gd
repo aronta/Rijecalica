@@ -6,6 +6,8 @@ var missing_word = []
 var pop_up
 var difficulty
 var used_sentence = []
+var global_sentence_container
+var curr_sentence_array
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"

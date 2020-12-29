@@ -63,6 +63,7 @@ func setup_scene():
 	sentence = sentence[rand]
 	full_sentence = sentence.recenica
 	var sentence_array = sentence.recenica.split(" ")
+	Global.curr_sentence_array = sentence_array
 	var subjekt = sentence.subjekt
 	var objekt = sentence.objekt
 	var predikat = sentence.predikat
@@ -70,6 +71,7 @@ func setup_scene():
 	generate_sentence(len(sentence_array))
 	
 	sentence_container = get_node("Sentence/HBoxContainer").get_children()
+	Global.global_sentence_container = sentence_container
 	
 	#RANDOM FOR MISSING WORD IN SENTENCE
 	for i in range (missing_words_len):
@@ -99,6 +101,7 @@ func setup_scene():
 				break
 				
 	Global.missing_word = missing_word_value
+	
 	#SETTING UP SENTENCE AND BLANK BOX
 	for i in len(sentence_container):
 		if i in random_position:
@@ -201,6 +204,7 @@ func hardPressed(full_reset=true):
 	Global.pop_up.get_child(4).text = full_sentence
 
 func resetButtonPressed():
+	reset_suggestion_box_positions()
 	if Global.difficulty == 1:
 		easyPressed(true)
 	elif Global.difficulty == 2:
