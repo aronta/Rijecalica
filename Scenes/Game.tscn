@@ -50,12 +50,12 @@ font_data = ExtResource( 2 )
 size = 28
 font_data = ExtResource( 2 )
 
-[sub_resource type="DynamicFont" id=7]
+[sub_resource type="DynamicFont" id=6]
 size = 29
 outline_size = 1
 font_data = ExtResource( 2 )
 
-[sub_resource type="ShaderMaterial" id=6]
+[sub_resource type="ShaderMaterial" id=7]
 
 [node name="Game" type="Node2D"]
 script = ExtResource( 4 )
@@ -416,7 +416,7 @@ margin_left = 72.0
 margin_top = 56.0
 margin_right = 784.0
 margin_bottom = 128.0
-custom_fonts/font = SubResource( 7 )
+custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 0.733333, 0.360784, 0.396078, 1 )
 custom_colors/font_outline_modulate = Color( 0.733333, 0.360784, 0.396078, 1 )
 text = "Subjekti su označeni crvenom bojom"
@@ -431,7 +431,7 @@ margin_left = 72.0
 margin_top = 104.0
 margin_right = 784.0
 margin_bottom = 176.0
-custom_fonts/font = SubResource( 7 )
+custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 0.419608, 0.45098, 0.545098, 1 )
 custom_colors/font_outline_modulate = Color( 0.419608, 0.45098, 0.545098, 1 )
 text = "Objekti su označeni sivom bojom"
@@ -446,7 +446,7 @@ margin_left = 72.0
 margin_top = 152.0
 margin_right = 784.0
 margin_bottom = 224.0
-custom_fonts/font = SubResource( 7 )
+custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 0.764706, 0.513726, 0.356863, 1 )
 custom_colors/font_outline_modulate = Color( 0.764706, 0.513726, 0.356863, 1 )
 text = "Predikati su označeni narančastom bojom"
@@ -461,7 +461,7 @@ margin_left = 72.0
 margin_top = 208.0
 margin_right = 784.0
 margin_bottom = 325.0
-custom_fonts/font = SubResource( 7 )
+custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 0.486275, 0.705882, 0.831373, 1 )
 custom_colors/font_outline_modulate = Color( 0.486275, 0.705882, 0.831373, 1 )
 text = "Mjesta u rečenicama gdje fali odgovor zajedno sa ponuđenim odgovorima označeni su plavom bojom"
@@ -476,7 +476,7 @@ margin_left = 80.0
 margin_top = 368.0
 margin_right = 792.0
 margin_bottom = 443.0
-custom_fonts/font = SubResource( 7 )
+custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 0.145098, 0.294118, 0.439216, 1 )
 custom_colors/font_outline_modulate = Color( 0.145098, 0.294118, 0.439216, 1 )
 text = "Cilj igre: staviti ispravni rečenični dio na odgovarajuće mjesto u rečenici"
@@ -521,7 +521,7 @@ position = Vector2( 0, -100 )
 script = ExtResource( 13 )
 
 [node name="TextureButton" type="TextureButton" parent="BackButton"]
-material = SubResource( 6 )
+material = SubResource( 7 )
 margin_right = 40.0
 margin_bottom = 40.0
 texture_normal = ExtResource( 9 )

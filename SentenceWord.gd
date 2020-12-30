@@ -52,4 +52,8 @@ func _process(delta):
 func _on_Area2D_area_entered(area):
 	flag = true
 	suggested_word = area
-   
+	self.modulate = Color(1, 1, 1, 0.67)
+	
+func _on_Area2D_area_exited(area):
+	flag = false
+	self.modulate = Color(1, 1, 1, 1)
