@@ -4,6 +4,7 @@ var file_path = "res://Data/easy_db.json"
 var len_suggestions_words
 var missing_word = []
 var pop_up
+var end_pop_up
 var difficulty
 var used_sentence = []
 var global_sentence_container

@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=38 format=2]
 
 [ext_resource path="res://varela-60.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Fonts/VarelaRound-Regular.ttf" type="DynamicFontData" id=2]
@@ -21,6 +21,15 @@
 [ext_resource path="res://Assets/PopMenu/StisnutiGumb.png" type="Texture" id=19]
 [ext_resource path="res://Scenes/ResetButton.gd" type="Script" id=20]
 [ext_resource path="res://Assets/Icons/PNG/White/2x/return.png" type="Texture" id=21]
+[ext_resource path="res://Assets/PopMenu/returnButtonPressed.png" type="Texture" id=22]
+[ext_resource path="res://Assets/PopMenu/HomeButton.png" type="Texture" id=23]
+[ext_resource path="res://Assets/Icons/PNG/White/2x/trophy.png" type="Texture" id=24]
+[ext_resource path="res://Assets/PopMenu/HomeButtonPressed.png" type="Texture" id=25]
+[ext_resource path="res://Assets/Blocks/blueCircle.png" type="Texture" id=26]
+[ext_resource path="res://Assets/PopMenu/homeButtonPressedi.png" type="Texture" id=27]
+[ext_resource path="res://Assets/PopMenu/resetButtonPressed.png" type="Texture" id=28]
+[ext_resource path="res://Assets/Icons/PNG/White/2x/exclamation.png" type="Texture" id=29]
+[ext_resource path="res://Scenes/Help.gd" type="Script" id=30]
 
 [sub_resource type="DynamicFont" id=1]
 size = 80
@@ -40,6 +49,13 @@ font_data = ExtResource( 2 )
 [sub_resource type="DynamicFont" id=5]
 size = 28
 font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 29
+outline_size = 1
+font_data = ExtResource( 2 )
+
+[sub_resource type="ShaderMaterial" id=6]
 
 [node name="Game" type="Node2D"]
 script = ExtResource( 4 )
@@ -93,11 +109,27 @@ position = Vector2( 8, 48 )
 scale = Vector2( 0.397059, 0.410364 )
 texture = ExtResource( 16 )
 
+[node name="CircleWithSprite" type="TextureRect" parent="UI/MenuButtons/PopupMenu"]
+margin_left = -32.0
+margin_top = -144.0
+margin_right = 48.0
+margin_bottom = -64.0
+mouse_filter = 2
+texture = ExtResource( 26 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="UI/MenuButtons/PopupMenu/CircleWithSprite"]
+position = Vector2( 40, 40 )
+scale = Vector2( 0.705, 0.705 )
+texture = ExtResource( 29 )
+
 [node name="Title" type="Label" parent="UI/MenuButtons/PopupMenu"]
 margin_left = -168.0
-margin_top = -120.0
+margin_top = -56.0
 margin_right = 181.0
-margin_bottom = -64.0
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Bravo! To je točan odgovor!"
@@ -109,9 +141,8 @@ __meta__ = {
 
 [node name="Subtitle" type="Label" parent="UI/MenuButtons/PopupMenu"]
 margin_left = -144.0
-margin_top = -40.0
 margin_right = 168.0
-margin_bottom = -10.0
+margin_bottom = 30.0
 custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Točna rečenica glasila je:"
@@ -123,9 +154,9 @@ __meta__ = {
 
 [node name="fullSentence" type="Label" parent="UI/MenuButtons/PopupMenu"]
 margin_left = -144.0
-margin_top = 8.0
+margin_top = 32.0
 margin_right = 168.0
-margin_bottom = 64.0
+margin_bottom = 88.0
 custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 align = 1
@@ -136,9 +167,9 @@ __meta__ = {
 }
 
 [node name="TextureButton" type="TextureButton" parent="UI/MenuButtons/PopupMenu"]
-margin_left = -144.0
-margin_top = 104.0
-margin_right = 156.0
+margin_left = -136.0
+margin_top = 112.0
+margin_right = 152.0
 margin_bottom = 234.0
 texture_normal = ExtResource( 10 )
 texture_pressed = ExtResource( 19 )
@@ -153,6 +184,79 @@ custom_fonts/font = SubResource( 5 )
 text = "Nastavi"
 align = 1
 valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EndPopupMenu" type="PopupMenu" parent="UI/MenuButtons"]
+margin_left = 624.0
+margin_top = 352.0
+margin_right = 644.0
+margin_bottom = 372.0
+hide_on_item_selection = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="UI/MenuButtons/EndPopupMenu"]
+position = Vector2( 8, 56 )
+scale = Vector2( 0.397059, 0.410364 )
+texture = ExtResource( 16 )
+
+[node name="CircleWithSprite" type="TextureRect" parent="UI/MenuButtons/EndPopupMenu"]
+margin_left = -32.0
+margin_top = -128.0
+margin_right = 48.0
+margin_bottom = -48.0
+mouse_filter = 2
+texture = ExtResource( 26 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="UI/MenuButtons/EndPopupMenu/CircleWithSprite"]
+position = Vector2( 40, 40 )
+scale = Vector2( 0.705, 0.705 )
+texture = ExtResource( 24 )
+
+[node name="Title" type="Label" parent="UI/MenuButtons/EndPopupMenu"]
+margin_left = -160.0
+margin_top = -24.0
+margin_right = 189.0
+margin_bottom = 45.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Bravo! Sve je uspješno riješeno"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Subtitle" type="Label" parent="UI/MenuButtons/EndPopupMenu"]
+margin_left = -144.0
+margin_top = 56.0
+margin_right = 168.0
+margin_bottom = 86.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Za povratak na početak pritisnite tipku:"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton" type="TextureButton" parent="UI/MenuButtons/EndPopupMenu"]
+margin_left = -48.0
+margin_top = 128.0
+margin_right = 64.0
+margin_bottom = 233.0
+texture_normal = ExtResource( 23 )
+texture_pressed = ExtResource( 25 )
+expand = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -185,7 +289,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Options" type="Button" parent="UI/MenuButtons/Start/StartMenu"]
+[node name="Help" type="Button" parent="UI/MenuButtons/Start/StartMenu"]
 margin_top = 270.0
 margin_right = 1280.0
 margin_bottom = 350.0
@@ -195,7 +299,7 @@ custom_colors/font_color = Color( 0.717647, 0.196078, 0.196078, 1 )
 custom_colors/font_color_hover = Color( 0.235294, 0.262745, 0.803922, 1 )
 custom_colors/font_color_pressed = Color( 0.235294, 0.262745, 0.803922, 1 )
 enabled_focus_mode = 0
-text = "Opcije"
+text = "Upute"
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -282,11 +386,115 @@ __meta__ = {
 [node name="move_tween" type="Tween" parent="UI/MenuButtons/Options"]
 
 [node name="BackButton" type="TextureButton" parent="UI/MenuButtons/Options"]
-margin_left = 100.0
-margin_top = -50.0
-margin_right = 200.0
-margin_bottom = 50.0
+margin_left = 104.0
+margin_top = -52.0
+margin_right = 204.0
+margin_bottom = 48.0
 texture_normal = ExtResource( 9 )
+texture_pressed = ExtResource( 22 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Help" type="Node2D" parent="UI/MenuButtons"]
+position = Vector2( 1280, 96 )
+script = ExtResource( 30 )
+
+[node name="TextureRect" type="TextureRect" parent="UI/MenuButtons/Help"]
+margin_left = 208.0
+margin_top = -24.0
+margin_right = 1072.0
+margin_bottom = 576.0
+texture = ExtResource( 16 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="UI/MenuButtons/Help/TextureRect"]
+margin_left = 72.0
+margin_top = 56.0
+margin_right = 784.0
+margin_bottom = 128.0
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 0.733333, 0.360784, 0.396078, 1 )
+custom_colors/font_outline_modulate = Color( 0.733333, 0.360784, 0.396078, 1 )
+text = "Subjekti su označeni crvenom bojom"
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="nesto" type="Label" parent="UI/MenuButtons/Help/TextureRect"]
+margin_left = 72.0
+margin_top = 104.0
+margin_right = 784.0
+margin_bottom = 176.0
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 0.419608, 0.45098, 0.545098, 1 )
+custom_colors/font_outline_modulate = Color( 0.419608, 0.45098, 0.545098, 1 )
+text = "Objekti su označeni sivom bojom"
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="UI/MenuButtons/Help/TextureRect"]
+margin_left = 72.0
+margin_top = 152.0
+margin_right = 784.0
+margin_bottom = 224.0
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 0.764706, 0.513726, 0.356863, 1 )
+custom_colors/font_outline_modulate = Color( 0.764706, 0.513726, 0.356863, 1 )
+text = "Predikati su označeni narančastom bojom"
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label4" type="Label" parent="UI/MenuButtons/Help/TextureRect"]
+margin_left = 72.0
+margin_top = 208.0
+margin_right = 784.0
+margin_bottom = 325.0
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 0.486275, 0.705882, 0.831373, 1 )
+custom_colors/font_outline_modulate = Color( 0.486275, 0.705882, 0.831373, 1 )
+text = "Mjesta u rečenicama gdje fali odgovor zajedno sa ponuđenim odgovorima označeni su plavom bojom"
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label5" type="Label" parent="UI/MenuButtons/Help/TextureRect"]
+margin_left = 80.0
+margin_top = 368.0
+margin_right = 792.0
+margin_bottom = 443.0
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 0.145098, 0.294118, 0.439216, 1 )
+custom_colors/font_outline_modulate = Color( 0.145098, 0.294118, 0.439216, 1 )
+text = "Cilj igre: staviti ispravni rečenični dio na odgovarajuće mjesto u rečenici"
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="move_tween" type="Tween" parent="UI/MenuButtons/Help"]
+
+[node name="helpBackButton" type="TextureButton" parent="UI/MenuButtons/Help"]
+margin_left = 48.0
+margin_top = -80.0
+margin_right = 148.0
+margin_bottom = 20.0
+texture_normal = ExtResource( 9 )
+texture_pressed = ExtResource( 22 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -313,9 +521,11 @@ position = Vector2( 0, -100 )
 script = ExtResource( 13 )
 
 [node name="TextureButton" type="TextureButton" parent="BackButton"]
+material = SubResource( 6 )
 margin_right = 40.0
 margin_bottom = 40.0
 texture_normal = ExtResource( 9 )
+texture_pressed = ExtResource( 22 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -330,6 +540,7 @@ script = ExtResource( 15 )
 margin_right = 40.0
 margin_bottom = 40.0
 texture_normal = ExtResource( 14 )
+texture_pressed = ExtResource( 27 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -390,18 +601,22 @@ script = ExtResource( 20 )
 margin_right = 40.0
 margin_bottom = 40.0
 texture_normal = ExtResource( 21 )
+texture_pressed = ExtResource( 28 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="move_tween" type="Tween" parent="ResetButton"]
 [connection signal="pressed" from="UI/MenuButtons/PopupMenu/TextureButton" to="." method="popUpButtonPressed"]
+[connection signal="pressed" from="UI/MenuButtons/EndPopupMenu/TextureButton" to="." method="endPopupButtonPressed"]
 [connection signal="pressed" from="UI/MenuButtons/Start/StartMenu/Start" to="UI/MenuButtons" method="StartPressed"]
+[connection signal="pressed" from="UI/MenuButtons/Start/StartMenu/Help" to="." method="helpPressed"]
 [connection signal="pressed" from="UI/MenuButtons/Start/StartMenu/Quit" to="." method="_on_Quit_pressed"]
 [connection signal="pressed" from="UI/MenuButtons/Options/OptionsMenu/Easy" to="." method="easyPressed"]
 [connection signal="pressed" from="UI/MenuButtons/Options/OptionsMenu/Medium" to="." method="mediumPressed"]
 [connection signal="pressed" from="UI/MenuButtons/Options/OptionsMenu/Hard" to="." method="hardPressed"]
 [connection signal="pressed" from="UI/MenuButtons/Options/BackButton" to="UI/MenuButtons" method="backButtonPressed"]
+[connection signal="pressed" from="UI/MenuButtons/Help/helpBackButton" to="." method="helpBackButtonPressed"]
 [connection signal="pressed" from="BackButton/TextureButton" to="." method="inGameBackButtonPressed"]
 [connection signal="pressed" from="HomeButton/TextureButton" to="." method="homeButtonPressed"]
 [connection signal="pressed" from="ResetButton/TextureButton" to="." method="resetButtonPressed"]

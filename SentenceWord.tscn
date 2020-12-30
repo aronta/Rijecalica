@@ -9,7 +9,7 @@ size = 25
 font_data = ExtResource( 2 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 96, 56 )
+extents = Vector2( 16, 8 )
 
 [node name="SentenceWord" type="TextureRect"]
 margin_left = -88.0

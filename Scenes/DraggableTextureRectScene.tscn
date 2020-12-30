@@ -9,10 +9,10 @@ size = 25
 font_data = ExtResource( 3 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 96, 56 )
+extents = Vector2( 24, 16 )
 
 [node name="SuggestionBox" type="TextureRect"]
-margin_left = -79.0
+margin_left = -88.0
 margin_top = -48.0
 margin_right = 88.0
 margin_bottom = 52.0

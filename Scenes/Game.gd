@@ -7,6 +7,7 @@ var full_sentence
 
 func _ready():
 	Global.pop_up = get_node("UI/MenuButtons/PopupMenu")
+	Global.end_pop_up = get_node("UI/MenuButtons/EndPopupMenu")
 
 func _process(delta):
 	pass
@@ -35,14 +36,13 @@ func generate_sentence(sentence_len):
 		sentence_container.add_child(word)
 
 func setup_scene():
-	#FALI NADODAT DA FALI JEDNA RIJEC
+	var sentences = Global.sentences
 	var maybe_random_position 
 	var maybe_missing_word_value
 	var missing_word_value = []
 	var random_position = []
 	var suggestions = []
 	var missing_word_type = []
-	var sentences = Global.sentences
 	var sentence = Global.sentences
 	var number_of_sentences = sentence.size() 
 	
@@ -169,7 +169,7 @@ func easyPressed(full_reset=true):
 	Global.len_suggestions_words = 2
 	setup_scene()
 	move_all()
-	Global.pop_up.get_child(4).text = full_sentence
+	Global.pop_up.get_child(5).text = full_sentence
 
 func mediumPressed(full_reset=true):
 	if full_reset:
@@ -180,7 +180,7 @@ func mediumPressed(full_reset=true):
 	Global.len_suggestions_words = 3
 	setup_scene()
 	move_all()
-	Global.pop_up.get_child(4).text = full_sentence
+	Global.pop_up.get_child(5).text = full_sentence
 
 func hardPressed(full_reset=true):
 	if full_reset:
@@ -191,7 +191,7 @@ func hardPressed(full_reset=true):
 	Global.len_suggestions_words = 4
 	setup_scene()
 	move_all()
-	Global.pop_up.get_child(4).text = full_sentence
+	Global.pop_up.get_child(5).text = full_sentence
 
 func resetButtonPressed():
 	reset_suggestion_box_positions()
@@ -203,7 +203,6 @@ func resetButtonPressed():
 		hardPressed(true)
 
 func inGameBackButtonPressed():
-	Global.pop_up.hide()
 	get_node("UI").move(Vector2(0, 0))
 	get_node("Sentence").move(Vector2(0, -300))
 	get_node("BackButton").move(Vector2(0, -100))
@@ -213,7 +212,6 @@ func inGameBackButtonPressed():
 	get_node("SuggestedAnswers").move(Vector2(0, 840))
 
 func homeButtonPressed():
-	Global.pop_up.hide()
 	get_node("UI").move(Vector2(0, 0))
 	get_node("UI/MenuButtons/Options").move(Vector2(1280, 100))
 	get_node("UI/MenuButtons/Start").move(Vector2(0, 0))
@@ -238,3 +236,20 @@ func popUpButtonPressed():
 		mediumPressed(false)
 	else:
 		hardPressed(false)
+
+func endPopupButtonPressed():
+	Global.end_pop_up.hide()
+	get_node("UI").move(Vector2(0, 0))
+	get_node("Sentence").move(Vector2(0, -300))
+	reset_suggestion_box_positions()
+	get_node("SuggestedAnswers").move(Vector2(0, 840))
+
+
+func helpPressed():
+	get_node("UI/MenuButtons/Start").move(Vector2(-1280, 0))
+	get_node("UI/MenuButtons/Help").move(Vector2(0, 100))
+
+
+func helpBackButtonPressed():
+	get_node("UI/MenuButtons/Start").move(Vector2(0, 0))
+	get_node("UI/MenuButtons/Help").move(Vector2(1280, 100))
