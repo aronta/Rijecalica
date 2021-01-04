@@ -1,14 +1,14 @@
 {
 	"0": {
-		"recenica": "Ja sam covjek i hrvat",
-		"predikat": ["sam"],
-		"subjekt": ["Ja"],
-		"objekt": ["covjek", "hrvat"],
-		"ostalo" : ["i"]
+		"recenica": "Marko čita školsku lektiru",
+		"predikat": ["čita"],
+		"subjekt": ["Marko"],
+		"objekt": ["lektiru"],
+		"ostalo" : ["školsku"]
 	},
 	"1": {
-		"recenica": "Vidi psa kako laje",
-		"predikat": ["Vidi", "laje"],
+		"recenica": "Vidim psa kako laje",
+		"predikat": ["Vidim", "laje"],
 		"subjekt": [],
 		"objekt": ["psa"],
 		"ostalo" : ["kako"]
@@ -21,17 +21,52 @@
 		"ostalo" : ["čistu"]
 	},
 	"3": {
-		"recenica": "Ivan uči povijest i mrtvu geografiju",
+		"recenica": "Ivan uči prirodu i društvo",
 		"predikat": ["uči"],
 		"subjekt": ["Ivan"],
-		"objekt": ["povijest", "geografiju"],
-		"ostalo" : ["i", "mrtvu"]
+		"objekt": ["prirodu", "društvo"],
+		"ostalo" : ["i"]
 	},
 	"4": {
-		"recenica": "Anica oprezno vozi biciklu",
-		"predikat": ["vozi"],
+		"recenica": "Anica oprezno prelazi cestu",
+		"predikat": ["prelazi"],
 		"subjekt": ["Anica"],
-		"objekt": ["biciklu"],
+		"objekt": ["cestu"],
 		"ostalo" : ["oprezno"]
+	},
+	"5": {
+		"recenica": "Josipa voli sladoled od čokolade",
+		"predikat": ["voli"],
+		"subjekt": ["Josipa"],
+		"objekt": ["sladoled"],
+		"ostalo" : ["od", "čokolade"]
+	},
+	"6": {
+		"recenica": "Medvjed spava zimski san",
+		"predikat": ["spava"],
+		"subjekt": ["Medvjed"],
+		"objekt": ["san"],
+		"ostalo" : ["zimski"]
+	},
+	"7": {
+		"recenica": "Lovro i Jakov idu u kino",
+		"predikat": ["idu"],
+		"subjekt": ["Lovro", "Jakov"],
+		"objekt": ["kino"],
+		"ostalo" : ["i", "u"]
+	},
+	"8": {
+		"recenica": "Rijeka je lučki grad",
+		"predikat": ["je"],
+		"subjekt": ["Rijeka"],
+		"objekt": ["grad"],
+		"ostalo" : ["lučki"]
+	},
+	"9": {
+		"recenica": "Mama kupuje svježe jabuke",
+		"predikat": ["kupuje"],
+		"subjekt": ["Mama"],
+		"objekt": ["jabuke"],
+		"ostalo" : ["svježe"]
 	}
 }

@@ -5,6 +5,7 @@ var len_suggestions_words
 var missing_word = []
 var pop_up
 var end_pop_up
+var wrong_answer_pop_up
 var difficulty
 var used_sentence = []
 var global_sentence_container

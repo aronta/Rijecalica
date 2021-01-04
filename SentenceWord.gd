@@ -3,8 +3,7 @@ extends TextureRect
 var suggested_word
 var flag = false
 var ref = Vector2(0.5, 0.5)
-var missing_words_len = len(Global.missing_word)
-
+var deleted_missing_words = []
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -34,22 +33,27 @@ func _process(delta):
 		#Širina/2
 #		var sentence_word_width = sentence_word_CollShape.shape.extents.x
 #		var sentence_word_height = sentence_word_CollShape.shape.extents.y
-#
 #		var diff = sentence_word_area2d.global_position - suggested_word.global_position
-		
 #		if abs(diff.x) < sentence_word_width and abs(diff.y) < sentence_word_height:
 		if suggested_word.get_owner().get_child(0).text in Global.missing_word and sentence_word_label.text == "_____" and suggested_word.get_owner().get_child(0).text == Global.curr_sentence_array[position]:
+			deleted_missing_words.append(suggested_word.get_owner().get_child(0).text)
 			Global.missing_word.erase(suggested_word.get_owner().get_child(0).text)
+			#ENDING popup
 			if Global.missing_word.empty() and Global.sentences.size() != len(Global.used_sentence):
 				Global.pop_up.show()
 				move_buttons_away()
 			elif Global.missing_word.empty() and Global.sentences.size() == len(Global.used_sentence):
 				Global.end_pop_up.show()
 				move_buttons_away()
+		elif !(suggested_word.get_owner().get_child(0).text in deleted_missing_words):
+			Global.wrong_answer_pop_up.show()
+		else:
+			pass
 		
 		flag = false
 
 func _on_Area2D_area_entered(area):
+	
 	flag = true
 	suggested_word = area
 	self.modulate = Color(1, 1, 1, 0.67)

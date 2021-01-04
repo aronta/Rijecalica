@@ -8,6 +8,7 @@ var full_sentence
 func _ready():
 	Global.pop_up = get_node("UI/MenuButtons/PopupMenu")
 	Global.end_pop_up = get_node("UI/MenuButtons/EndPopupMenu")
+	Global.wrong_answer_pop_up = get_node("UI/MenuButtons/WrongAnswerPopup")
 
 func _process(delta):
 	pass
@@ -108,6 +109,7 @@ func setup_scene():
 			set_box_color(subjekt, objekt, predikat, sentence_container[i], sentence_array[i])
 	
 	#GENERATING SUGGESTIONS
+	var tmp_array
 	while true:
 		if len(suggestions) == Global.len_suggestions_words + 1:
 			break
@@ -119,7 +121,12 @@ func setup_scene():
 			continue
 		#AKO IMAMO PREDIKAT TRAZIMO SUBJEKTE I OBJEKTE
 		if 'p' in missing_word_type:
-			var tmp_array = sentences[random_sentence].subjekt + sentences[random_sentence].objekt
+			if 's' in missing_word_type:
+				tmp_array = sentences[random_sentence].objekt
+			elif 'o' in missing_word_type:
+				tmp_array = sentences[random_sentence].subjekt
+			else:
+				tmp_array = sentences[random_sentence].subjekt + sentences[random_sentence].objekt
 			tmp_array.shuffle()
 			for suggested_subjekt in tmp_array:
 				if suggested_subjekt in sentence_array:
@@ -130,13 +137,25 @@ func setup_scene():
 			suggestions.append(tmp_array[0])
 		#SHUFFLANJE PREDIKATA?!!?
 		elif 's' in missing_word_type or 'o' in missing_word_type:
-			for suggested_objekt_subjekt in sentences[random_sentence].predikat:
-				if suggested_objekt_subjekt in sentence_array:
+			if 'p' in missing_word_type:
+				tmp_array = sentences[random_sentence].ostalo
+			else:
+				tmp_array = sentences[random_sentence].ostalo + sentences[random_sentence].predikat
+			tmp_array.shuffle()
+			for suggested_word in tmp_array:
+				if suggested_word in sentence_array:
 					flag = true
 					break
-			if flag or sentences[random_sentence].predikat[0] in suggestions:
+			if flag or tmp_array[0] in suggestions:
 				continue
-			suggestions.append(sentences[random_sentence].predikat[0])
+			suggestions.append(tmp_array[0])
+#			for suggested_objekt_subjekt in sentences[random_sentence].predikat:
+#				if suggested_objekt_subjekt in sentence_array:
+#					flag = true
+#					break
+#			if flag or sentences[random_sentence].predikat[0] in suggestions:
+#				continue
+#			suggestions.append(sentences[random_sentence].predikat[0])
 		
 	suggestions.shuffle()
 	#DISPLAYING SUGGESTIONS
@@ -253,3 +272,9 @@ func helpPressed():
 func helpBackButtonPressed():
 	get_node("UI/MenuButtons/Start").move(Vector2(0, 0))
 	get_node("UI/MenuButtons/Help").move(Vector2(1280, 100))
+
+
+func tryAgainButtonPressed():
+	reset_suggestion_box_positions()
+	Global.wrong_answer_pop_up.hide()
+	
