@@ -368,8 +368,6 @@ __meta__ = {
 }
 
 [node name="Help" type="Button" parent="UI/MenuButtons/Start/StartMenu"]
-anchor_top = 0.0016129
-anchor_bottom = 0.0016129
 margin_top = 270.0
 margin_right = 1280.0
 margin_bottom = 350.0
