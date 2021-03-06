@@ -1,72 +1,72 @@
 {
 	"0": {
-		"recenica": "Marko čita školsku lektiru",
+		"recenica": "Marko čita školsku lektiru.",
 		"predikat": ["čita"],
 		"subjekt": ["Marko"],
-		"objekt": ["lektiru"],
+		"objekt": ["lektiru."],
 		"ostalo" : ["školsku"]
 	},
 	"1": {
-		"recenica": "Vidim psa kako laje",
-		"predikat": ["Vidim", "laje"],
+		"recenica": "Vidim psa kako laje.",
+		"predikat": ["Vidim", "laje."],
 		"subjekt": [],
 		"objekt": ["psa"],
 		"ostalo" : ["kako"]
 	},
 	"2": {
-		"recenica": "Pas pije čistu vodu",
+		"recenica": "Pas pije čistu vodu.",
 		"predikat": ["pije"],
 		"subjekt": ["Pas"],
-		"objekt": ["vodu"],
+		"objekt": ["vodu."],
 		"ostalo" : ["čistu"]
 	},
 	"3": {
-		"recenica": "Ivan uči prirodu i društvo",
+		"recenica": "Ivan uči prirodu i društvo.",
 		"predikat": ["uči"],
 		"subjekt": ["Ivan"],
-		"objekt": ["prirodu", "društvo"],
+		"objekt": ["prirodu", "društvo."],
 		"ostalo" : ["i"]
 	},
 	"4": {
-		"recenica": "Anica oprezno prelazi cestu",
+		"recenica": "Anica oprezno prelazi cestu.",
 		"predikat": ["prelazi"],
 		"subjekt": ["Anica"],
-		"objekt": ["cestu"],
+		"objekt": ["cestu."],
 		"ostalo" : ["oprezno"]
 	},
 	"5": {
-		"recenica": "Josipa voli sladoled od čokolade",
+		"recenica": "Josipa voli sladoled od čokolade.",
 		"predikat": ["voli"],
 		"subjekt": ["Josipa"],
-		"objekt": ["sladoled"],
-		"ostalo" : ["od", "čokolade"]
+		"objekt": ["sladoled", "čokolade."],
+		"ostalo" : ["od"]
 	},
 	"6": {
-		"recenica": "Medvjed spava zimski san",
+		"recenica": "Medvjed spava zimski san.",
 		"predikat": ["spava"],
 		"subjekt": ["Medvjed"],
-		"objekt": ["san"],
+		"objekt": ["san."],
 		"ostalo" : ["zimski"]
 	},
 	"7": {
-		"recenica": "Lovro i Jakov idu u kino",
+		"recenica": "Lovro i Jakov idu u kino.",
 		"predikat": ["idu"],
 		"subjekt": ["Lovro", "Jakov"],
-		"objekt": ["kino"],
+		"objekt": ["kino."],
 		"ostalo" : ["i", "u"]
 	},
 	"8": {
-		"recenica": "Rijeka je lučki grad",
+		"recenica": "Rijeka je lučki grad.",
 		"predikat": ["je"],
 		"subjekt": ["Rijeka"],
-		"objekt": ["grad"],
+		"objekt": ["grad."],
 		"ostalo" : ["lučki"]
 	},
 	"9": {
-		"recenica": "Mama kupuje svježe jabuke",
+		"recenica": "Mama kupuje svježe jabuke.",
 		"predikat": ["kupuje"],
 		"subjekt": ["Mama"],
-		"objekt": ["jabuke"],
+		"objekt": ["jabuke."],
 		"ostalo" : ["svježe"]
 	}
 }

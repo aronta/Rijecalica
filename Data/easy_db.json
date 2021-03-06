@@ -1,51 +1,51 @@
 {
 	"0": {
-		"recenica": "Ja sam čovjek",
+		"recenica": "Ja sam čovjek.",
 		"predikat": ["sam"],
 		"subjekt": ["Ja"],
-		"objekt": ["čovjek"],
+		"objekt": ["čovjek."],
 		"ostalo" : []
 	},
 	"1": {
-		"recenica": "Ana ima sok",
+		"recenica": "Ana ima sok.",
 		"predikat": ["ima"],
 		"subjekt": ["Ana"],
-		"objekt": ["sok"],
+		"objekt": ["sok."],
 		"ostalo" : []
 	},
 	"2": {
-		"recenica": "Pas pije vodu",
+		"recenica": "Pas pije vodu.",
 		"predikat": ["pije"],
 		"subjekt": ["Pas"],
-		"objekt": ["vodu"],
+		"objekt": ["vodu."],
 		"ostalo" : []
 	},
 	"3": {
-		"recenica": "Ivan uči matematiku",
+		"recenica": "Ivan uči matematiku.",
 		"predikat": ["uči"],
 		"subjekt": ["Ivan"],
-		"objekt": ["matematiku"],
+		"objekt": ["matematiku."],
 		"ostalo" : []
 	},
 	"4": {
-		"recenica": "Anica vozi biciklu",
+		"recenica": "Anica vozi bicikl.",
 		"predikat": ["vozi"],
 		"subjekt": ["Anica"],
-		"objekt": ["biciklu"],
+		"objekt": ["bicikl."],
 		"ostalo" : []
 	},
 	"5": {
-		"recenica": "Petar voli nogomet",
+		"recenica": "Petar voli nogomet.",
 		"predikat": ["voli"],
 		"subjekt": ["Petar"],
-		"objekt": ["nogomet"],
+		"objekt": ["nogomet."],
 		"ostalo" : []
 	},
 	"6": {
-		"recenica": "Marija sadi cvijeće",
+		"recenica": "Marija sadi cvijeće.",
 		"predikat": ["sadi"],
 		"subjekt": ["Marija"],
-		"objekt": ["cvijeće"],
+		"objekt": ["cvijeće."],
 		"ostalo" : []
 	}
 }

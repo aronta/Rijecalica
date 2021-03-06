@@ -89,7 +89,7 @@ margin_right = 1280.0
 margin_bottom = 197.0
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0.145098, 0.294118, 0.439216, 1 )
-text = "RIJEČALICA"
+text = "RJEČALICA"
 align = 1
 valign = 1
 __meta__ = {
@@ -250,6 +250,7 @@ custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Za povratak na početak pritisnite tipku:"
 align = 1
 valign = 1
+autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -343,9 +344,9 @@ __meta__ = {
 script = ExtResource( 5 )
 
 [node name="StartMenu" type="VBoxContainer" parent="UI/MenuButtons/Start"]
-margin_top = 104.0
+margin_top = 102.811
 margin_right = 1280.0
-margin_bottom = 724.0
+margin_bottom = 722.811
 alignment = 1
 __meta__ = {
 "_edit_use_anchors_": false
@@ -497,22 +498,7 @@ margin_bottom = 128.0
 custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 0.733333, 0.360784, 0.396078, 1 )
 custom_colors/font_outline_modulate = Color( 0.733333, 0.360784, 0.396078, 1 )
-text = "Subjekti su označeni crvenom bojom"
-valign = 1
-autowrap = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="nesto" type="Label" parent="UI/MenuButtons/Help/TextureRect"]
-margin_left = 72.0
-margin_top = 104.0
-margin_right = 784.0
-margin_bottom = 176.0
-custom_fonts/font = SubResource( 6 )
-custom_colors/font_color = Color( 0.419608, 0.45098, 0.545098, 1 )
-custom_colors/font_outline_modulate = Color( 0.419608, 0.45098, 0.545098, 1 )
-text = "Objekti su označeni sivom bojom"
+text = "IMENICE su označene crvenom bojom"
 valign = 1
 autowrap = true
 __meta__ = {
@@ -520,14 +506,14 @@ __meta__ = {
 }
 
 [node name="Label3" type="Label" parent="UI/MenuButtons/Help/TextureRect"]
-margin_left = 72.0
-margin_top = 152.0
-margin_right = 784.0
-margin_bottom = 224.0
+margin_left = 69.4802
+margin_top = 134.361
+margin_right = 781.48
+margin_bottom = 206.361
 custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 0.764706, 0.513726, 0.356863, 1 )
 custom_colors/font_outline_modulate = Color( 0.764706, 0.513726, 0.356863, 1 )
-text = "Predikati su označeni narančastom bojom"
+text = "GLAGOLI su označene narančastom bojom"
 valign = 1
 autowrap = true
 __meta__ = {
@@ -535,14 +521,14 @@ __meta__ = {
 }
 
 [node name="Label4" type="Label" parent="UI/MenuButtons/Help/TextureRect"]
-margin_left = 72.0
-margin_top = 208.0
-margin_right = 784.0
-margin_bottom = 325.0
+margin_left = 68.2202
+margin_top = 226.899
+margin_right = 780.22
+margin_bottom = 343.899
 custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 0.486275, 0.705882, 0.831373, 1 )
 custom_colors/font_outline_modulate = Color( 0.486275, 0.705882, 0.831373, 1 )
-text = "Mjesta u rečenicama gdje fali odgovor zajedno sa ponuđenim odgovorima označeni su plavom bojom"
+text = "Mjesta u rečenicama gdje nedostaje riječ, i ponuđeni odgovori označeni su plavom bojom"
 valign = 1
 autowrap = true
 __meta__ = {
@@ -550,14 +536,14 @@ __meta__ = {
 }
 
 [node name="Label5" type="Label" parent="UI/MenuButtons/Help/TextureRect"]
-margin_left = 80.0
-margin_top = 368.0
-margin_right = 792.0
-margin_bottom = 443.0
+margin_left = 73.0
+margin_top = 366.74
+margin_right = 785.0
+margin_bottom = 441.74
 custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 0.145098, 0.294118, 0.439216, 1 )
 custom_colors/font_outline_modulate = Color( 0.145098, 0.294118, 0.439216, 1 )
-text = "Cilj igre: staviti ispravni rečenični dio na odgovarajuće mjesto u rečenici"
+text = "CILJ IGRE: staviti ispravnu riječ na odgovarajuće mjesto u rečenici"
 valign = 1
 autowrap = true
 __meta__ = {

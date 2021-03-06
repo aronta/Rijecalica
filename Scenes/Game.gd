@@ -20,7 +20,7 @@ func set_box_color(subjekt, objekt, predikat, box, rijec):
 	if rijec in subjekt:
 		box.texture = load("res://Assets/Blocks/RedButton.png")
 	elif rijec in objekt:
-		box.texture = load("res://Assets/Blocks/DiffBlueButton.png")
+		box.texture = load("res://Assets/Blocks/RedButton.png")
 	elif rijec in predikat:
 		box.texture = load("res://Assets/Blocks/OrangeButton.png")
 
