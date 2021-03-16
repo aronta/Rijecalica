@@ -21,4 +21,6 @@ func _on_TextureRect_gui_input(event):
 			drag_position = null
 			
 	if event is InputEventMouseMotion and drag_position:
+		if(get_global_mouse_position().x > 1210 || get_global_mouse_position().x < 70 || get_global_mouse_position().y > 680 || get_global_mouse_position().y < 70):
+			return
 		rect_global_position = get_global_mouse_position() - drag_position

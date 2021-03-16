@@ -344,9 +344,9 @@ __meta__ = {
 script = ExtResource( 5 )
 
 [node name="StartMenu" type="VBoxContainer" parent="UI/MenuButtons/Start"]
-margin_top = 102.811
+margin_top = 104.0
 margin_right = 1280.0
-margin_bottom = 722.811
+margin_bottom = 724.0
 alignment = 1
 __meta__ = {
 "_edit_use_anchors_": false
