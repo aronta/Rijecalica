@@ -28,13 +28,18 @@ func delete_children_nodes(parent_node):
 	for n in parent_node.get_children():
 		parent_node.remove_child(n)
 		n.queue_free()
-	
+
+func reset_suggestion_box_positions():
+	var suggestion_container = get_node("SuggestedAnswers/HBoxContainer")
+	suggestion_container.set_alignment(1)
+
 func generate_sentence(sentence_len):
 	var sentence_container = get_node("Sentence/HBoxContainer")
 	delete_children_nodes(sentence_container)
 	for i in range (sentence_len):
 		var word = sentence_word.instance()
 		sentence_container.add_child(word)
+	reset_suggestion_box_positions()
 
 func setup_scene():
 	var sentences = Global.sentences
@@ -171,13 +176,9 @@ func move_all():
 	get_node("UI").move(Vector2(0, -1280))
 	get_node("Sentence").move(Vector2(0, 190))
 	get_node("BackButton").move(Vector2(50, 50))
-	get_node("ResetButton").move(Vector2(50, 580))
+	get_node("ResetButton").move(Vector2(10, 600))
 	get_node("HomeButton").move(Vector2(1100, 50))
 	get_node("SuggestedAnswers").move(Vector2(0, 550))
-	
-func reset_suggestion_box_positions():
-	var suggestion_container = get_node("SuggestedAnswers/HBoxContainer")
-	suggestion_container.set_alignment(1)
 		
 func easyPressed(full_reset=true):
 	if full_reset:
@@ -213,6 +214,7 @@ func hardPressed(full_reset=true):
 	Global.pop_up.get_child(5).text = full_sentence
 
 func resetButtonPressed():
+	#delete_children_nodes(get_node("Sentence/HBoxContainer"))
 	reset_suggestion_box_positions()
 	if Global.difficulty == 1:
 		easyPressed(true)

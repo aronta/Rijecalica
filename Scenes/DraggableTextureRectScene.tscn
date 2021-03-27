@@ -1,30 +1,33 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://DraggableTextureRect.gd" type="Script" id=1]
-[ext_resource path="res://Assets/Blocks/BlueButton.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Blocks/BlueButton-darker.png" type="Texture" id=2]
 [ext_resource path="res://Fonts/VarelaRound-Regular.ttf" type="DynamicFontData" id=3]
 
 [sub_resource type="DynamicFont" id=1]
-size = 25
+size = 30
 font_data = ExtResource( 3 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 24, 16 )
+extents = Vector2( 32, 16 )
 
 [node name="SuggestionBox" type="TextureRect"]
-margin_left = -88.0
+margin_left = -104.0
 margin_top = -48.0
-margin_right = 88.0
-margin_bottom = 52.0
+margin_right = 104.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 208, 128 )
 texture = ExtResource( 2 )
+expand = true
+stretch_mode = 5
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Label" type="Label" parent="."]
-margin_right = 182.0
-margin_bottom = 100.0
+margin_right = 208.0
+margin_bottom = 112.0
 custom_fonts/font = SubResource( 1 )
 align = 1
 valign = 1
@@ -33,7 +36,7 @@ __meta__ = {
 }
 
 [node name="Area2D" type="Area2D" parent="."]
-position = Vector2( 88, 48 )
+position = Vector2( 104, 56 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource( 2 )

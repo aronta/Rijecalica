@@ -612,52 +612,6 @@ __meta__ = {
 
 [node name="move_tween" type="Tween" parent="HomeButton"]
 
-[node name="SuggestedAnswers" type="Node2D" parent="."]
-position = Vector2( 0, 840 )
-script = ExtResource( 17 )
-
-[node name="HBoxContainer" type="HBoxContainer" parent="SuggestedAnswers"]
-margin_top = -7.99994
-margin_right = 1280.0
-margin_bottom = 183.0
-alignment = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="SuggestionBox" parent="SuggestedAnswers/HBoxContainer" instance=ExtResource( 18 )]
-margin_left = 192.0
-margin_top = 0.0
-margin_right = 368.0
-margin_bottom = 190.0
-stretch_mode = 3
-
-[node name="SuggestionBox2" parent="SuggestedAnswers/HBoxContainer" instance=ExtResource( 18 )]
-margin_left = 372.0
-margin_top = 0.0
-margin_right = 548.0
-margin_bottom = 190.0
-
-[node name="SuggestionBox3" parent="SuggestedAnswers/HBoxContainer" instance=ExtResource( 18 )]
-margin_left = 552.0
-margin_top = 0.0
-margin_right = 728.0
-margin_bottom = 190.0
-
-[node name="SuggestionBox4" parent="SuggestedAnswers/HBoxContainer" instance=ExtResource( 18 )]
-margin_left = 732.0
-margin_top = 0.0
-margin_right = 908.0
-margin_bottom = 190.0
-
-[node name="SuggestionBox5" parent="SuggestedAnswers/HBoxContainer" instance=ExtResource( 18 )]
-margin_left = 912.0
-margin_top = 0.0
-margin_right = 1088.0
-margin_bottom = 190.0
-
-[node name="move_tween" type="Tween" parent="SuggestedAnswers"]
-
 [node name="ResetButton" type="Node2D" parent="."]
 position = Vector2( 0, 720 )
 script = ExtResource( 20 )
@@ -672,6 +626,52 @@ __meta__ = {
 }
 
 [node name="move_tween" type="Tween" parent="ResetButton"]
+
+[node name="SuggestedAnswers" type="Node2D" parent="."]
+position = Vector2( 0, 840 )
+script = ExtResource( 17 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="SuggestedAnswers"]
+margin_top = -7.99994
+margin_right = 1280.0
+margin_bottom = 183.0
+mouse_filter = 2
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SuggestionBox" parent="SuggestedAnswers/HBoxContainer" instance=ExtResource( 18 )]
+margin_left = 112.0
+margin_top = 0.0
+margin_right = 320.0
+margin_bottom = 190.0
+
+[node name="SuggestionBox2" parent="SuggestedAnswers/HBoxContainer" instance=ExtResource( 18 )]
+margin_left = 324.0
+margin_top = 0.0
+margin_right = 532.0
+margin_bottom = 190.0
+
+[node name="SuggestionBox3" parent="SuggestedAnswers/HBoxContainer" instance=ExtResource( 18 )]
+margin_left = 536.0
+margin_top = 0.0
+margin_right = 744.0
+margin_bottom = 190.0
+
+[node name="SuggestionBox4" parent="SuggestedAnswers/HBoxContainer" instance=ExtResource( 18 )]
+margin_left = 748.0
+margin_top = 0.0
+margin_right = 956.0
+margin_bottom = 190.0
+
+[node name="SuggestionBox5" parent="SuggestedAnswers/HBoxContainer" instance=ExtResource( 18 )]
+margin_left = 960.0
+margin_top = 0.0
+margin_right = 1168.0
+margin_bottom = 190.0
+
+[node name="move_tween" type="Tween" parent="SuggestedAnswers"]
 [connection signal="pressed" from="UI/MenuButtons/PopupMenu/TextureButton" to="." method="popUpButtonPressed"]
 [connection signal="pressed" from="UI/MenuButtons/EndPopupMenu/TextureButton" to="." method="endPopupButtonPressed"]
 [connection signal="pressed" from="UI/MenuButtons/WrongAnswerPopup/TextureButton" to="." method="tryAgainButtonPressed"]

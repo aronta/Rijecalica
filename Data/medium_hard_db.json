@@ -49,20 +49,13 @@
 		"ostalo" : ["zimski"]
 	},
 	"7": {
-		"recenica": "Lovro i Jakov idu u kino.",
-		"predikat": ["idu"],
-		"subjekt": ["Lovro", "Jakov"],
-		"objekt": ["kino."],
-		"ostalo" : ["i", "u"]
-	},
-	"8": {
 		"recenica": "Rijeka je lučki grad.",
 		"predikat": ["je"],
 		"subjekt": ["Rijeka"],
 		"objekt": ["grad."],
 		"ostalo" : ["lučki"]
 	},
-	"9": {
+	"8": {
 		"recenica": "Mama kupuje svježe jabuke.",
 		"predikat": ["kupuje"],
 		"subjekt": ["Mama"],
